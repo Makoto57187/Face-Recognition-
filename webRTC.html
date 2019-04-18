@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    .booth{
+            width: 400px;
+            background-color: #ccc;
+            border: 10px solid #ddd;
+            margin: 0 auto ;
+        }
+    .booth-capture-button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: cornflowerblue;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+    <title>Register Image Student</title>
+</head>
+<body>
+    <div class="booth">
+        <video id="video" width="400" height="300"></video>
+        <a href="#" id="capture" class="booth-capture-button">Take photo</a>
+    </div>
+
+    <!-- <script async src="opencv.js" onload="onOpenCvReady();" type="text/javascript"></script> -->
+    <script src="js/webRTC.js"></script>
+    
+    <!-- <script src="/all_insearchJavascripts/OpenCV_facedetection.js"></script>
+    <script src="/all_insearchJavascripts/faceDetection.js"></script> -->
+</body>
+</html>

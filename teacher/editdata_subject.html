@@ -1,0 +1,122 @@
+<html>
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link href="../CSS/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/bootstrap-grid.min.css">
+		<script src="../js/jquery-3.3.1.min.js"></script>
+		<script src="../js/popper_1_14_3.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" 
+		integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+		crossorigin="anonymous"><!--การเรียกใช้ Code icon สามารถเลือกใช้ได้เลย-->
+		<!--ลองไปศึกษา Javascript ดูเพราะปัจจุบันสำคัญมาก-->
+	<title>Edit Data subject Form</title>
+</head>
+<body style="background:gray;">
+		<div class="container-fluid navbar navbar-expand-lg navbar-dark bg-info fixed-top" style="opacity: 0.4!important;">
+                <nav class="navbar-nav mr-auto collapse navbar-collapse row" style="opacity: 0.4!important;">
+                            <li><a class="navbar-brand text-light col-lg-3" href="home.php" style="opacity: 0.4!important;"><i class="fas fa-bookmark"></i> Class Attendance using Face Recognition</a>
+                            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse">
+                                <span class="navbar-toggler-icon"></span>
+                            </button></li>
+                            <li class="col-lg-2" style="opacity: 0.4!important;"></li>
+                            <li class="nav-item col-lg-2" style="opacity: 0.4!important;"><a href="searchcourse.php" class="nav-link text-light"><i class="fas fa-home"></i> ค้นหารายวิชา</a></li>
+                            <li class="nav-item col-lg-2" style="opacity: 0.4!important;"><a href="insertsub.php" class="nav-link text-light"><i class="fas fa-plus"></i> เพิ่มรายวิชา</a></li>
+                            <li class="nav-item dropdown col-lg-2" style="opacity: 0.4!important;">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="right:0%;">Mr.Example Lastname</a>
+                                <!--dropdown-toggle เป็นคลาสของบูตสแตรป data-toggle เป้น Javascript-->
+                                <div class="dropdown-menu">
+                                    <a href="teacher_account.php" class="dropdown-item">บัญชีผู้ใช้</a>
+                                    <a href="" class="dropdown-item">ออกสู่ระบบ</a>
+                                    <a href="" class="dropdown-item"></a>
+                                </div>
+                            </li>
+                </nav>
+        </div>
+	<div class="row" style="margin-top:100px; opacity: 0.4!important;">
+				<div class="container col-4 float-left">
+					<h1>Course</h1> 
+				</div>
+				<div class="col-2">
+	
+				</div>
+				<div class="col-6" >
+				
+				</div>
+		  </div>
+	<div class="row" >
+	 <div class="container col-4 float-left" style="margin-top:20px; opacity: 0.4!important;">
+				<nav class="navbar navbar-expand navbar-dark bg-info">
+					<div class="collapse navbar-collapse">
+						<ul class="navbar mr-auto">
+							<div class="">
+							<li class="nav-item nav-link"><a href="display_data_sub.php" class="text-light">ข้อมูลรายวิชา</a></li>
+							<li class="nav-item nav-link"><a href="display_list_sub.php" class="text-light">รายชื่อนักศึกษาในรายวิชา</a></li>
+							<li class="nav-item nav-link"><a href="display_status_classatt.php" class="text-light">สถานะการเข้าชั้นเรียน</a></li>
+							<li class="nav-item nav-link"><a href="display_score_classatt.php" class="text-light">คะแนนการเข้าชั้นเรียน</a></li>
+							</div>  
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="col-8"></div>
+	<div class="card" style="top:50%; left:50%; position: absolute; transform: translate(-50%, -50%); padding: 50px; width:500px; height: 525px; border-radius:25px;">
+	<form action="display_data_sub.php" method="post">
+		<h1>ข้อมูลรายวิชา</h1>
+		<div class="row">
+			<label class="col-sm-3 col-form-label-sm text-right">รหัสวิชา</label> 
+			<input type="text" name="dept_no" size=30
+				placeholder="946-344" autocomplete="off" class="col-sm-3 form-control-sm">
+		</div>
+		<div class="row">
+			<label class="col-sm-3 col-form-label-sm text-right">ชื่อรายวิชา </label> 
+			<input type="text" name="dept_name" size=30
+			placeholder="MANAG. OF INFORMATION SYSTEM" class="col-sm-8 form-control-sm">
+		</div>
+		<div class="row">
+			<label class="col-sm-3 col-form-label-sm text-right">section</label> 
+			<select name="sec" id="" style="margin:2px;">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+				</select><br>
+		</div>
+		<div class="row">
+			<label class="col-sm-3 col-form-label-sm text-right">เทอม</label> 
+			<select name="term" id="" style="margin:2px;">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+				</select><br>
+		</div>
+		<div class="row">
+			<label class="col-sm-3 col-form-label-sm text-right">ปีการศึกษา</label> 
+			<input type="text" name="year" class="col-sm-4 form-control-sm">
+		</div>
+		<div class="row">
+			<label class="col-sm-3 col-form-label-sm text-right">เวลา </label>
+			<input type="text" name="dept_name" size=30
+			placeholder=" 09.00 - 12.00 น." class="col-sm-5 form-control-sm">
+		</div>	
+		<div class="row">
+			<label class="col-sm-3 col-form-label-sm ">จำนวนนักศึกษาที่รับ</label> 
+			<input type="text" name="dept_name" size=30
+			placeholder="45 " class="col-sm-2 form-control-sm">
+		</div>
+		<div class="row">
+		<label class="col-sm-3 col-form-label-sm ">คะแนนเข้าห้อง</label> 
+		 <input type="text" name="dept_name" size=30
+		placeholder="5%" class="col-sm-2 form-control-sm">
+		</div>
+		<div class="row">
+			<div class="col-sm-3 "></div>
+			<input type=submit name="submit" value="submit" class="btn btn-dark mr-4">
+			<input type=reset name="reset" value="cancel" class="btn btn-danger">
+		</div>
+	</form>
+	<br>
+	</div>
+</body>
+</html>
